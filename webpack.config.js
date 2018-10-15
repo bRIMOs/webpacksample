@@ -4,7 +4,7 @@ var path = require("path");
 
 module.exports = {
 
-    mode: 'development',
+    mode: 'production',
     entry : './src/main.js',
     output: {
         
@@ -12,6 +12,31 @@ module.exports = {
 
         filename: 'bundle.js'
 
+    },
+
+    module : {
+
+        rules: [
+            {
+                
+                test: /\.css$/,
+
+                use: ["style-loader", "css-loader"]
+
+            },
+            {
+                
+                test: /\.js$/,
+
+                exclude: /node_modules/,
+
+                loader: "babel-loader"
+
+            }
+        ]
+
     }
+
+
 
 };
