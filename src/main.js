@@ -3,15 +3,12 @@
 // notification.notify("Hello world :) !..");
 // notification.log(notification);
 
-class Form {
+// class Form {
+//     constructor () {
+//         alert("Yeyy");
+//     }
+// }
 
-    constructor () {
+// new Form();
 
-        alert("Yeyy");
-
-    }
-
-
-}
-
-new Form();
+require('./main.scss') 
