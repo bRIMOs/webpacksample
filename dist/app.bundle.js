@@ -86,14 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/Notificiation.js":
+/*!******************************!*\
+  !*** ./src/Notificiation.js ***!
+  \******************************/
+/*! exports provided: default, notify, log */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"notify\", function() { return notify; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"log\", function() { return log; });\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  notify: notify,\n  log: log\n});\nfunction notify(message) {\n  alert(message);\n}\nfunction log(message) {\n  console.log(message);\n}\n\n//# sourceURL=webpack:///./src/Notificiation.js?");
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// import notification from './Notificiation'\n// notification.notify(\"Hello world :) !..\");\n// notification.log(notification);\n// class Form {\n//     constructor () {\n//         alert(\"Yeyy\");\n//     }\n// }\n// new Form();\n__webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n\n//# sourceURL=webpack:///./src/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Notificiation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Notificiation */ \"./src/Notificiation.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n\n_Notificiation__WEBPACK_IMPORTED_MODULE_0__[\"default\"].notify(\"Hello world :) !..\");\n_Notificiation__WEBPACK_IMPORTED_MODULE_0__[\"default\"].log(_Notificiation__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\nvar Form = function Form() {\n  _classCallCheck(this, Form);\n\n  alert(\"Yeyy\");\n};\n\nnew Form();\n\n__webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 

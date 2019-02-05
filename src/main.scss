@@ -1,9 +1,10 @@
 $primary: green;
+$secondary: red;
 
 body {
     background: $primary;
 }
 
 .hello {
-    color:$primary;
+    color:$secondary;
 }

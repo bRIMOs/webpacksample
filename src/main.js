@@ -1,14 +1,14 @@
-// import notification from './Notificiation'
+import notification from './Notificiation'
 
-// notification.notify("Hello world :) !..");
-// notification.log(notification);
+notification.notify("Hello world :) !..");
+notification.log(notification);
 
-// class Form {
-//     constructor () {
-//         alert("Yeyy");
-//     }
-// }
+class Form {
+    constructor () {
+        alert("Yeyy");
+    }
+}
 
-// new Form();
+new Form();
 
 require('./main.scss') 
