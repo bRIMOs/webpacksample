@@ -9,11 +9,12 @@ module.exports = {
 
     mode: 'development',
     entry : {
-        app:'./src/main.js',
+        app:'./src/index.js',
     },
     output: {
         path: path.resolve(__dirname,"./dist"),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: '/dist/'
     },
     module : {
         rules: [
