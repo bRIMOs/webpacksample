@@ -4,17 +4,18 @@ var path = require("path");
 var glob = require('glob');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var  PurifyCSSPlugin = require('purifycss-webpack');
+var  HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 
-    mode: 'development',
+    mode: 'production',
     entry : {
         app:'./src/index.js',
     },
     output: {
         path: path.resolve(__dirname,"./dist"),
         filename: '[name].bundle.js',
-        publicPath: '/dist/'
+        //publicPath: ''
     },
     module : {
         rules: [
@@ -27,7 +28,7 @@ module.exports = {
                         options: {
                             // you can specify a publicPath here
                             // by default it use publicPath in webpackOptions.output
-                            publicPath: '../'
+                            //publicPath: '../'
                         }
                     },
                     'css-loader','sass-loader'
@@ -41,7 +42,20 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
-            }
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                        context: 'public',
+                        
+                    },
+                  },
+                ],
+            },
         ]
     },
     plugins : [
@@ -58,6 +72,10 @@ module.exports = {
 
         new webpack.LoaderOptionsPlugin ({
             minimize: true
+        }),
+        new HtmlWebpackPlugin({
+            title: 'My App',
+            template: path.join(__dirname, 'index.html')
         })
         
     ]

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './main.scss';
 import Notification from './component/Notificiation'
+import pic from '../public/images/dev.png'
 
 class App extends Component {
   handleCLick  =  (e) => {
@@ -11,7 +12,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-            Hello moto ! allah yer7am ...!ssss
+            <img src={pic} />
+            Hello moto ! allah yer7am ...!ssssssss
             <br />test
         </header>
         <button onClick={(e) => this.handleCLick(e)}>Click</button>
